@@ -81,6 +81,7 @@ out/
 # Gradle files
 .gradle
 .gradle/
+.gradle/8.2/*
 build/
 
 # Signing files
