@@ -1,4 +1,4 @@
-package com.app.compose_study.presentation.chatting
+package com.app.compose_study.presentation.ui.library
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

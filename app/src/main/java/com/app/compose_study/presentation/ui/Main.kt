@@ -1,9 +1,8 @@
-package com.app.compose_study.presentation
+package com.app.compose_study.presentation.ui
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -27,9 +26,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.app.compose_study.presentation.category.RadioScreen
-import com.app.compose_study.presentation.chatting.LibraryScreen
-import com.app.compose_study.presentation.home.HomeScreen
+import com.app.compose_study.presentation.ui.radio.RadioScreen
+import com.app.compose_study.presentation.ui.library.LibraryScreen
+import com.app.compose_study.presentation.ui.home.HomeScreen
 
 @Composable
 fun DisneyComposeApp() {

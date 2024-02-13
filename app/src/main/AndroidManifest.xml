@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Composestudy"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Composestudy">
             <intent-filter>
