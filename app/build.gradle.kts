@@ -83,4 +83,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 
     implementation ("androidx.compose.material:material-icons-extended:1.6.1")
+
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 }

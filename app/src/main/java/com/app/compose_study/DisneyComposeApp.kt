@@ -4,10 +4,4 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class DisneyComposeApp : Application() {
-}
-
-/* Trouble Shooting
-   Hilt, Compose Compiler, Kotlin Version Setting
-
-*/
+class DisneyComposeApp : Application()

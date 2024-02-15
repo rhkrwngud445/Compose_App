@@ -20,12 +20,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.app.compose_study.data.model.Post
 import com.app.compose_study.presentation.ui.radio.RadioScreen
 import com.app.compose_study.presentation.ui.library.LibraryScreen
 import com.app.compose_study.presentation.ui.home.HomeScreen
@@ -100,14 +102,15 @@ private fun MainBottomNavigation(
 @Composable
 private fun NavHost(
     navController: NavHostController,
-    innerPadding: PaddingValues
+    innerPadding: PaddingValues,
+    viewModel: MainViewModel = hiltViewModel()
 ) {
     androidx.navigation.compose.NavHost(
         navController,
         startDestination = NavScreen.Home.route,
         Modifier.padding(innerPadding)
     ) {
-        composable(NavScreen.Home.route) { HomeScreen(navController) }
+        composable(NavScreen.Home.route) { HomeScreen(navController, listOf(Post.mock())) }
         composable(NavScreen.Radio.route) { RadioScreen(navController) }
         composable(NavScreen.Library.route) { LibraryScreen(navController) }
     }
