@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Radio
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -105,6 +106,9 @@ private fun NavHost(
     innerPadding: PaddingValues,
     viewModel: MainViewModel = hiltViewModel()
 ) {
+    // livedata vs flow
+    // stateflow vs sharedFlow
+    // collectWithLifeCycle vs collectWithState
     androidx.navigation.compose.NavHost(
         navController,
         startDestination = NavScreen.Home.route,

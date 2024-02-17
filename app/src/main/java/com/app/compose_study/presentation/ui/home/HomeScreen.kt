@@ -56,11 +56,6 @@ fun HomeListScreen(data: List<Post>) {
         items(data.size) {
             GridItemCard(data = data[it])
         }
-//        data.value.forEachIndexed { index, post ->
-//            items(index) { _ ->
-//                GridItemCard(data = post)
-//            }
-//        }
     }
 }
 
