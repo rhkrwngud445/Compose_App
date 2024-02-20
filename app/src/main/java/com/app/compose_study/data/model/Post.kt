@@ -2,7 +2,6 @@ package com.app.compose_study.data.model
 
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 data class Post(
     val id: Long,

@@ -1,7 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
+    kotlin("plugin.serialization")
+    id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
 }
 
@@ -71,8 +72,9 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+
+
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -85,4 +87,6 @@ dependencies {
     implementation ("androidx.compose.material:material-icons-extended:1.6.1")
 
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("com.google.dagger:hilt-android:2.48")
+    ksp("com.google.dagger:hilt-android-compiler:2.48")
 }
